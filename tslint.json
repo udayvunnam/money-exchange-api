@@ -1,0 +1,9 @@
+{
+  "defaultSeverity": "warn",
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "no-implicit-dependencies": [false, "dev", ["src/types"]],
+    "object-literal-sort-keys": false
+  }
+}
