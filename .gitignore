@@ -57,5 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
