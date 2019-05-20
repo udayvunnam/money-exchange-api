@@ -1,9 +1,9 @@
 import axios from "axios";
-import { Conversion } from "conversion";
+import { ConvertInput } from "convert-input";
 import { APP_CONST } from "../util/constants";
 import { updateUsage } from "./firestore.service";
 
-export let convert = async (data: Conversion) => {
+export let convert = async (data: ConvertInput) => {
   const { value, from, to } = data;
   const response = await axios.get(`${APP_CONST.EXCHANGE_RATES_API}/latest`, {
     params: {

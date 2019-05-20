@@ -1,4 +1,4 @@
-import { Convertion } from "convertion.js";
+import { Conversion } from "conversion.js";
 import admin, { ServiceAccount } from "firebase-admin";
 import serviceAccount from "../config/firestore.json";
 
@@ -8,7 +8,7 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-export let updateUsage = (lastConversion: Convertion) => {
+export let updateUsage = (lastConversion: Conversion) => {
   db.collection("usage").add({
     ...lastConversion,
     created: new Date()
