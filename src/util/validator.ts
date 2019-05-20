@@ -12,6 +12,5 @@ export const convertInputSchema = Joi.object().keys({
 
 export const usageSchema = Joi.number()
   .integer()
-  .required()
   .min(1)
   .max(100);

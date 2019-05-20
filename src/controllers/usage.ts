@@ -15,7 +15,7 @@ export let getUsage = async (
     logger.error(error);
     res
       .status(status.METHOD_NOT_ALLOWED)
-      .end({ error, message: "Invalid input" });
+      .json({ error, message: "Invalid input" });
   }
 
   const usageLimit = parseInt(req.query.limit, 10) || 10;
