@@ -1,5 +1,6 @@
 import errorHandler from "errorhandler";
 import { NextFunction, Request, Response } from "express";
+import status from "http-status";
 import app from "./app";
 import logger from "./util/logger";
 import { ENVIRONMENT, PORT } from "./util/secrets";
@@ -10,7 +11,9 @@ if (ENVIRONMENT === "development") {
 } else {
   app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     logger.error(err);
-    res.status(500).json({ message: "Oops! Something went wrong" });
+    res
+      .status(status.METHOD_NOT_ALLOWED)
+      .json({ message: "Oops! Something went wrong" });
   });
 }
 

@@ -13,7 +13,9 @@ export let getUsage = async (
   const { error } = Joi.validate(req.query.limit, usageSchema);
   if (error) {
     logger.error(error);
-    res.status(405).json({ error, message: "Invalid input" });
+    res
+      .status(status.METHOD_NOT_ALLOWED)
+      .json({ error, message: "Invalid input" });
   }
 
   const usageLimit = parseInt(req.query.limit, 10) || 10;

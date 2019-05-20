@@ -19,8 +19,8 @@ REST API - koa2
 ## Features
 
 - /convert: convert any money value from one currency to another
-- /usage: Get recent history of conversions and repeat.
-- /currency: Get list of currency symbols along with full names
+- /usage: get recent history of conversions and repeat.
+- /currency: get list of currency symbols along with full names
 
 ## Install
 
@@ -38,7 +38,7 @@ REST API - koa2
 
 ## Documentation
 
-swagger is available at http://localhost:8080/api-docs/
+After starting the server, swagger is available at http://localhost:8080/api-docs/
 
 ## Running tests
 

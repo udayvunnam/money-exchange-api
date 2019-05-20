@@ -1,0 +1,167 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API for currency conversions in real time and historical usage trends.",
+    "version": "1.0.0",
+    "title": "Money Exchange API"
+  },
+  "host": "localhost:8080",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "currency",
+      "description": "Get all currency symbols along with their full names"
+    },
+    {
+      "name": "convert",
+      "description": "Convert any money value from one currency to another."
+    },
+    {
+      "name": "usage",
+      "description": "Get past n conversions happened through this API, defaults to 10"
+    }
+  ],
+  "paths": {
+    "/currency": {
+      "get": {
+        "tags": ["currency"],
+        "operationId": "getCurrency",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "List of currencies with description, in an object",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/convert": {
+      "post": {
+        "tags": ["convert"],
+        "operationId": "convertCurrency",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConvertInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Converted value",
+            "schema": {
+              "$ref": "#/definitions/ConvertOutput"
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/usage": {
+      "get": {
+        "tags": ["usage"],
+        "operationId": "get",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit for past n transactions",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "an array of coversions",
+            "schema": {
+              "$ref": "#/definitions/Usage"
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ConvertInput": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      }
+    },
+    "ConvertOutput": {
+      "type": "object",
+      "properties": {
+        "convretedValue": {
+          "type": "number"
+        },
+        "exchangeRate": {
+          "type": "number"
+        }
+      }
+    },
+    "Usage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "convertedValue": {
+            "type": "number"
+          },
+          "exchangeRate": {
+            "type": "number"
+          },
+          "created": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "GitHub repository",
+    "url": "https://github.com/udayvunnam/money-exchange"
+  }
+}

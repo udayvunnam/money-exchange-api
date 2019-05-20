@@ -13,7 +13,9 @@ export let postConvert = async (
   const { error } = Joi.validate(req.body, convertInputSchema);
   if (error) {
     logger.error(error);
-    res.status(405).json({ error, message: "Invalid input" });
+    res
+      .status(status.METHOD_NOT_ALLOWED)
+      .json({ error, message: "Invalid input" });
   }
 
   const { from, to, value } = req.body;
