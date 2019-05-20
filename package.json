@@ -1,0 +1,26 @@
+{
+  "name": "money-exchange-api",
+  "version": "1.0.0",
+  "description": "Offers realtime currency conversions and history. Uses https://exchangeratesapi.io/ API internally.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udayvunnam/money-exchange-api.git"
+  },
+  "keywords": [
+    "currency",
+    "conversion",
+    "money",
+    "exchange",
+    "typescript"
+  ],
+  "author": "Uday Vunnam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/udayvunnam/money-exchange-api/issues"
+  },
+  "homepage": "https://github.com/udayvunnam/money-exchange-api#readme"
+}
