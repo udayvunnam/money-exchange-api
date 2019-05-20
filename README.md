@@ -6,15 +6,14 @@ https://moneyexchange.netlify.com
 Tech stack:
 
 - [Node](https://angular.io): Runtime
-- [Docker](https://www.docker.com/): Container
-- [Swagger](https://swagger.io/): API specification and documentation
+- [Docker](https://www.docker.com): Container
+- [Swagger](https://swagger.io): API specification and documentation
 - [Firestore](https://firebase.google.com/docs/firestore): NoSql cloud database
-- [TypeScript](https://www.typescriptlang.org/): Language
-- [Express](https://expressjs.com/): REST API
+- [Jest](https://jestjs.io), [Chai](https://www.chaijs.com): Testing
+- [TypeScript](https://www.typescriptlang.org): Language
+- [Express](https://expressjs.com): REST API
 - [Winston](https://github.com/winstonjs/winston): Logging
 - [Morgan](https://github.com/expressjs/morgan): HTTP Request logger
-
-REST API - koa2
 
 ## Features
 
