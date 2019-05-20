@@ -1,7 +1,7 @@
 # Money Exchange API
 
 API for currency conversions in real time and historical usage trends.
-https://moneyexchange.netlify.com
+https://8080-dot-7115380-dot-devshell.appspot.com/
 
 Tech stack:
 
@@ -17,9 +17,9 @@ Tech stack:
 
 ## Features
 
-- /convert: convert any money value from one currency to another
-- /usage: get recent history of conversions and repeat.
-- /currency: get list of currency symbols along with full names
+- [/convert](https://8080-dot-7115380-dot-devshell.appspot.com/v1/convert): convert any money value from one currency to another
+- [/usage](https://8080-dot-7115380-dot-devshell.appspot.com/v1/usage): get recent history of conversions and repeat.
+- [/currency](https://8080-dot-7115380-dot-devshell.appspot.com/v1/currency): get list of currency symbols along with full names
 
 ## Install
 
