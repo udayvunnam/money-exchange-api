@@ -15,7 +15,7 @@ export let postConvert = async (
     logger.error(error);
     res
       .status(status.METHOD_NOT_ALLOWED)
-      .json({ error, message: "Invalid input" });
+      .end({ error, message: "Invalid input" });
   }
 
   const { from, to, value } = req.body;
