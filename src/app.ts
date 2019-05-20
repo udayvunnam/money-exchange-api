@@ -5,6 +5,7 @@ import express from "express";
 import expressValidator from "express-validator";
 import helmet from "helmet";
 import morgan from "morgan";
+import setRoutes from "./routes/routes";
 import logger from "./util/logger";
 
 const app = express();
@@ -25,5 +26,6 @@ app.use(
     }
   })
 );
+setRoutes(app);
 
 export default app;
