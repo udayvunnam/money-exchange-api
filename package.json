@@ -14,7 +14,10 @@
     "debug": "npm run build && npm run watch-debug",
     "serve-debug": "nodemon --inspect dist/server.js",
     "watch-debug": "concurrently -k -p '[{name}]' -n 'TypeScript,Node' -c 'yellow.bold,cyan.bold' 'npm run watch-ts' 'npm run serve-debug'",
-    "lint": "tslint-config-prettier-check ./tslint.json"
+    "lint": "tslint-config-prettier-check ./tslint.json",
+    "docker-build-and-run": "docker build -t image-wwc . && docker run --name container-wwc -p 8080:8080 image-wwc",
+    "docker-stop-and-clear": "(docker stop container-wwc || true) && (docker rm container-wwc || true)",
+    "docker-start": "npm run docker-stop-and-clear && npm run build && npm run docker-build-and-run"
   },
   "repository": {
     "type": "git",
