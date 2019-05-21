@@ -1,7 +1,7 @@
 # Money Exchange API
 
 API for currency conversions in real time and historical usage trends.
-https://moneyexchange.netlify.com/
+https://api-moneyexchange.herokuapp.com/
 
 Tech stack:
 
@@ -18,9 +18,9 @@ Tech stack:
 
 ## Features
 
-- [/convert](https://moneyexchange.netlify.com/v1/convert): convert any money value from one currency to another
-- [/usage](https://moneyexchange.netlify.com/v1/usage): get recent history of conversions and repeat.
-- [/currency](https://moneyexchange.netlify.com/v1/currency): get list of currency symbols along with full names
+- [/convert](https://api-moneyexchange.herokuapp.com/v1/convert): convert any money value from one currency to another
+- [/usage](https://api-moneyexchange.herokuapp.com/v1/usage): get recent history of conversions and repeat.
+- [/currency](https://api-moneyexchange.herokuapp.com/v1/currency): get list of currency symbols along with full names
 
 ## Install
 
@@ -40,7 +40,7 @@ Tech stack:
 
 After starting the server, swagger is available at http://localhost:8080/api-docs/
 
-- [Deployed swagger url](https://moneyexchange.netlify.com/api-docs/)
+- [Deployed swagger url](https://api-moneyexchange.herokuapp.com/api-docs/)
 
 ## Running tests
 

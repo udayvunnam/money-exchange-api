@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "title": "Money Exchange API"
   },
-  "host": "localhost:8080",
+  "host": "https://api-moneyexchange.herokuapp.com/",
   "basePath": "/v1",
   "tags": [
     {
@@ -162,6 +162,6 @@
   },
   "externalDocs": {
     "description": "GitHub repository",
-    "url": "https://github.com/udayvunnam/money-exchange"
+    "url": "https://github.com/udayvunnam/money-exchange-api"
   }
 }
