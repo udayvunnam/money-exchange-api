@@ -1,9 +1,9 @@
 # Money Exchange API
 
-API for currency conversions in real time and historical usage trends.
-https://api-moneyexchange.herokuapp.com/
+API for currency conversions in real time and historical usage trends - https://api-moneyexchange.herokuapp.com
+Uses NoSQL DB - FireStore for storing past conversions and https://exchangeratesapi.io for getting exchange rates
 
-Tech stack:
+**Tech stack**:
 
 - [Node](https://angular.io): Runtime
 - [Docker](https://www.docker.com): Container
@@ -22,16 +22,16 @@ Tech stack:
 - [/usage](https://api-moneyexchange.herokuapp.com/v1/usage): get recent history of conversions and repeat.
 - [/currency](https://api-moneyexchange.herokuapp.com/v1/currency): get list of currency symbols along with full names
 
-## Install
+## Installation
 
 - `https://github.com/udayvunnam/money-exchange-api.git`
 - `cd money-exchange-api && npm install`
 
-### Running in development mode
+## Running in development mode
 
 - `npm run dev`
 
-### Running with Docker
+## Running with Docker
 
 - Start docker application
 - `npm run docker-start`
@@ -40,8 +40,7 @@ Tech stack:
 
 After starting the server, swagger is available at http://localhost:8080/api-docs/
 
-- [Deployed swagger url](https://api-moneyexchange.herokuapp.com/api-docs/)
 
-## Running tests
+## Running Unit tests
 
 Run `npm run test`
