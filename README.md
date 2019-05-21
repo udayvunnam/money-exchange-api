@@ -1,7 +1,8 @@
 # Money Exchange API
 
 API for currency conversions in real time and historical usage trends - https://api-moneyexchange.herokuapp.com
-Uses NoSQL DB - FireStore for storing past conversions and https://exchangeratesapi.io for getting exchange rates
+
+Uses FireStore(NoSQL DB) for storing past conversions happened through this api and exchangeratesapi for getting latest exchange rates.
 
 **Tech stack**:
 
@@ -18,9 +19,9 @@ Uses NoSQL DB - FireStore for storing past conversions and https://exchangerates
 
 ## Features
 
-- [/convert](https://api-moneyexchange.herokuapp.com/v1/convert): convert any money value from one currency to another
-- [/usage](https://api-moneyexchange.herokuapp.com/v1/usage): get recent history of conversions and repeat.
-- [/currency](https://api-moneyexchange.herokuapp.com/v1/currency): get list of currency symbols along with full names
+- [/convert](https://api-moneyexchange.herokuapp.com/v1/convert): convert any money value from one currency to another.
+- [/usage](https://api-moneyexchange.herokuapp.com/v1/usage): get recent history of conversions.
+- [/currency](https://api-moneyexchange.herokuapp.com/v1/currency): get list of currency symbols along with full names.
 
 ## Installation
 
