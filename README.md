@@ -44,4 +44,4 @@ After starting the server, swagger is available at http://localhost:8080/api-doc
 
 ## Running Unit tests
 
-Run `npm run test`
+Run `npm run test` to execute tests with Jest
