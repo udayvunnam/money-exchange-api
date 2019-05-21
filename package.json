@@ -4,7 +4,7 @@
   "description": "Offers realtime currency conversions and history. Uses https://exchangeratesapi.io/ API internally.",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run serve",
+    "start": "npm run build && npm run serve",
     "serve": "node dist/server.js",
     "build": "tsc",
     "dev": "npm run build && npm run watch",
