@@ -36,7 +36,7 @@ Tech stack:
 - Start docker application
 - `npm run docker-start`
 
-## Documentation
+## Swagger Documentation
 
 After starting the server, swagger is available at http://localhost:8080/api-docs/
 
