@@ -1,7 +1,7 @@
 # Money Exchange API
 
 API for currency conversions in real time and historical usage trends.
-https://8080-dot-7115380-dot-devshell.appspot.com/
+https://moneyexchange.netlify.com/
 
 Tech stack:
 
@@ -14,12 +14,13 @@ Tech stack:
 - [Express](https://expressjs.com): REST API
 - [Winston](https://github.com/winstonjs/winston): Logging
 - [Morgan](https://github.com/expressjs/morgan): HTTP Request logger
+- [Heroku](https://devcenter.heroku.com/): Cloud Deploymnet
 
 ## Features
 
-- [/convert](https://8080-dot-7115380-dot-devshell.appspot.com/v1/convert): convert any money value from one currency to another
-- [/usage](https://8080-dot-7115380-dot-devshell.appspot.com/v1/usage): get recent history of conversions and repeat.
-- [/currency](https://8080-dot-7115380-dot-devshell.appspot.com/v1/currency): get list of currency symbols along with full names
+- [/convert](https://moneyexchange.netlify.com/v1/convert): convert any money value from one currency to another
+- [/usage](https://moneyexchange.netlify.com/v1/usage): get recent history of conversions and repeat.
+- [/currency](https://moneyexchange.netlify.com/v1/currency): get list of currency symbols along with full names
 
 ## Install
 
@@ -38,6 +39,8 @@ Tech stack:
 ## Documentation
 
 After starting the server, swagger is available at http://localhost:8080/api-docs/
+
+- [Deployed swagger url](https://moneyexchange.netlify.com/api-docs/)
 
 ## Running tests
 
